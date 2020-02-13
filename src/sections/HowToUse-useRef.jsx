@@ -7,7 +7,7 @@ import {
   useRefExample3
 } from "../snippets/HowToUseHook-useRef";
 
-import { Header, Paragraph, QuestionHeader } from "../application/Application";
+import { Header, Paragraph } from "../application/Application";
 
 export const HowToUseUseRef = props => {
   // useRef Example

@@ -4,7 +4,7 @@ import { editorStyles, globals, handleHighlight } from "../shared";
 
 import { useEventListenerExample } from "../snippets/codeBlockLibrary";
 
-import { Header, Paragraph, QuestionHeader } from "../application/Application";
+import { Header, Paragraph } from "../application/Application";
 
 export const HowToUseUseEventListener = props => {
   // useEventListener Example

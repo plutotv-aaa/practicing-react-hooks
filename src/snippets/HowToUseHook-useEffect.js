@@ -15,3 +15,9 @@ useEffect(() => {
     }
   })
 `;
+
+export const useEffectFnDeps = `
+useEffect(() => {
+    
+  }, [])
+`;
