@@ -1,3 +1,4 @@
+export { Blockquote } from "./Blockquote";
 export { Nav } from "./Nav";
 export { Header } from "./Header";
 export { List } from "./List";
