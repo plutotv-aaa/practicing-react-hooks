@@ -15,25 +15,22 @@ export const HowToUseUseEventListener = props => {
     updateHandleUseEventListenerCode(editor);
 
   return (
-    <article>
-      {/* useEventListener */}
-      <section>
-        <Header>Hook useEventListener</Header>
-        <Paragraph>
-          If you find yourself adding a lot of event listeners using useEffect
-          you might consider moving that logic to a custom hook. In the recipe
-          below we create a useEventListener hook that handles checking if
-          addEventListener is supported, adding the event listener, and removal
-          on cleanup. See it in action in the CodeSandbox demo.
-        </Paragraph>
-        <Editor
-          value={useEventListenerCode}
-          onValueChange={handleUseEventListenerCode}
-          highlight={handleHighlight}
-          padding={globals.PADDING}
-          style={editorStyles}
-        />
-      </section>
-    </article>
+    <section>
+      <Header>Hook useEventListener</Header>
+      <Paragraph>
+        If you find yourself adding a lot of event listeners using useEffect you
+        might consider moving that logic to a custom hook. In the recipe below
+        we create a useEventListener hook that handles checking if
+        addEventListener is supported, adding the event listener, and removal on
+        cleanup. See it in action in the CodeSandbox demo.
+      </Paragraph>
+      <Editor
+        value={useEventListenerCode}
+        onValueChange={handleUseEventListenerCode}
+        highlight={handleHighlight}
+        padding={globals.PADDING}
+        style={editorStyles}
+      />
+    </section>
   );
 };

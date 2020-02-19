@@ -12,3 +12,36 @@ function Counter() {
   );
 }
 `;
+
+export const RenderNumberCodeSnippet = `
+const count = 42;
+// ...
+<p>You clicked {count} times</p>
+// ...
+`;
+
+export const RenderCountLifeCodeSnippet = `
+// During first render
+function Counter() {
+  const count = 0; // Returned by useState()
+  // ...
+  <p>You clicked {count} times</p>
+  // ...
+}
+
+// After a click, our function is called again
+function Counter() {
+  const count = 1; // Returned by useState()
+  // ...
+  <p>You clicked {count} times</p>
+  // ...
+}
+
+// After another click, our function is called again
+function Counter() {
+  const count = 2; // Returned by useState()
+  // ...
+  <p>You clicked {count} times</p>
+  // ...
+}
+`;

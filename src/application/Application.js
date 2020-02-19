@@ -1,7 +1,6 @@
-import { Nav } from "./Nav";
-import { Header } from "./Header";
-import { QuestionHeader } from "./QuestionHeader";
-import { QuestionEmoji } from "./QuestionEmoji";
-import { Paragraph } from "./Paragraph";
-
-export { Header, Nav, Paragraph, QuestionHeader, QuestionEmoji };
+export { Nav } from "./Nav";
+export { Header } from "./Header";
+export { List } from "./List";
+export { QuestionHeader } from "./QuestionHeader";
+export { QuestionEmoji } from "./QuestionEmoji";
+export { Paragraph } from "./Paragraph";
