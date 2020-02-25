@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Editor from "react-simple-code-editor";
 import { editorStyles, globals, handleHighlight } from "../shared";
 
-import { useEventListenerExample } from "../snippets/codeBlockLibrary";
+import { useEventListenerExample } from "../snippets/HowToUseHook-UseEventListener";
 
 import { Header, Paragraph } from "../application/Application";
 

@@ -6,6 +6,7 @@ export const Nav = () => (
     <Link to="/">Render</Link>
     <Link to="/use-effect">useEffect</Link>
     <Link to="/use-ref">useRef</Link>
+    <Link to="/use-reducer">useReducer</Link>
     <Link to="/use-event-listener">useEventListener</Link>
   </nav>
 );
