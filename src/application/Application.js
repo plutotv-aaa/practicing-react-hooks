@@ -1,7 +1,12 @@
 export { Blockquote } from "./Blockquote";
+export { BugEmoji } from "./BugEmoji";
+export { FireEmoji } from "./FireEmoji";
 export { Nav } from "./Nav";
 export { Header } from "./Header";
+export { Image } from "./Image";
 export { List } from "./List";
 export { QuestionHeader } from "./QuestionHeader";
 export { QuestionEmoji } from "./QuestionEmoji";
+export { RocketEmoji } from "./RocketEmoji";
 export { Paragraph } from "./Paragraph";
+export { WrenchEmoji } from "./WrenchEmoji";

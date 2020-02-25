@@ -3,11 +3,15 @@ import Editor from "react-simple-code-editor";
 
 import {
   Blockquote,
+  BugEmoji,
+  FireEmoji,
   Header,
   List,
   Paragraph,
   QuestionEmoji,
-  QuestionHeader
+  QuestionHeader,
+  RocketEmoji,
+  WrenchEmoji
 } from "../application/Application";
 
 import { editorStyles, globals, handleHighlight } from "../shared";
@@ -109,6 +113,13 @@ export const HowToUseUseRef = props => {
         </strong>
       </Blockquote>
       <Paragraph>
+        There are two main uses of <code>useRef</code>:
+      </Paragraph>
+      <List>
+        <li>Accessing DOM nodes or React Elements</li>
+        <li>Keeping a mutable variable</li>
+      </List>
+      <Paragraph>
         In this example, we are using the the <strong>createRef API</strong> to
         manage the focus of an input when the user clicks on the button.
       </Paragraph>
@@ -186,7 +197,7 @@ export const HowToUseUseRef = props => {
         weight. However, if you test the code above, you can see that our effect
         run every time the user clicks on the button, even when the weight
         property stays the same. That is because useEffect Hook use shallow
-        comparison by default while our userState is an object. 🐛🐛🐛 🔧 To fix
+        comparison by default while our userState is an object. <BugEmoji/><BugEmoji/> <BugEmoji/><WrenchEmoji /> To fix
         this bug, we need to write our own comparison instead of using the
         default one.
       </Paragraph>
@@ -213,7 +224,7 @@ export const HowToUseUseRef = props => {
         <code>ComponentDidUpdate</code> lifecycle, we can easily have the
         previous state value.
       </Paragraph>
-      <Blockquote>🔥 useRef comes to rescue</Blockquote>
+      <Blockquote><FireEmoji /> useRef comes to rescue</Blockquote>
       <Editor
         value={useRefCustomComparisonFix2Code}
         onValueChange={handleUseRefCustomComparisonFix2Code}
@@ -254,10 +265,10 @@ export const HowToUseUseRef = props => {
         </a>
       </Paragraph>
       <Paragraph>
-        🚀 useRef Hook is more than just to manage DOM ref and it is definitely
-        not createRef doppelganger. useRef can persist a value for a full
-        lifetime of the component. However, note that the component will not
-        rerender when the current value of useRef changes, if you want that
+        <RocketEmoji /> useRef Hook is more than just to manage DOM ref and it
+        is definitely not createRef doppelganger. useRef can persist a value for
+        a full lifetime of the component. However, note that the component will
+        not rerender when the current value of useRef changes, if you want that
         effect, use useState hook instead 👏👏👏
       </Paragraph>
       <Header>Resources</Header>

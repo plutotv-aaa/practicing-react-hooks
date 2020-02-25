@@ -4,10 +4,14 @@ import { editorStyles, globals, handleHighlight } from "../shared";
 import {
   RenderCodeSnippet,
   RenderNumberCodeSnippet,
-  RenderCountLifeCodeSnippet
+  RenderCountLifeCodeSnippet,
+  RenderParagraphCodeSnippet,
+  RenderCountAlertSnippet
 } from "../snippets/HowItWorks-Render";
 
-import { Header, Paragraph } from "../application/Application";
+import { Header, Image, List, Paragraph } from "../application/Application";
+import CounterGif from "../assets/counter.gif";
+import "./styles/Rendering.css";
 
 export const HowItWorksRendering = props => {
   // counter
@@ -24,6 +28,18 @@ export const HowItWorksRendering = props => {
     RenderCountLifeCodeSnippet
   );
   const handleRenderCountLifeCode = editor => updateRenderCountLifeCode(editor);
+  // Paragraph tag
+  const [renderParagraphCountCode, updateRenderParagraphCountCode] = useState(
+    RenderParagraphCodeSnippet
+  );
+  const handleRenderParagraphCountCode = editor =>
+    updateRenderParagraphCountCode(editor);
+  // Render has its own event handlers example 1
+  const [renderCountAlertCode, updateRenderCountAlertCode] = useState(
+    RenderCountAlertSnippet
+  );
+  const handleRenderCountAlertCode = editor =>
+    updateRenderCountAlertCode(editor);
 
   return (
     <section>
@@ -79,6 +95,58 @@ export const HowItWorksRendering = props => {
           our function.
         </strong>
       </Paragraph>
+      <Paragraph>This next line doesn't do any special data binding:</Paragraph>
+      <Editor
+        value={renderParagraphCountCode}
+        onValueChange={handleRenderParagraphCountCode}
+        highlight={handleHighlight}
+        padding={globals.PADDING}
+        style={editorStyles}
+      />
+      <Paragraph>
+        It only embeds a number value into the render output. That number is
+        provided by React. When we setCount, React calls our component again
+        with a different count value. Then React updates the DOM to match our
+        latest render output.
+      </Paragraph>
+      <Paragraph>
+        The key takeaway is that the count constant inside any particular render
+        doesn’t change over time. It’s our component that’s called again — and
+        each render “sees” its own count value that’s isolated between renders.
+      </Paragraph>
+      <Paragraph>
+        (For an in-depth overview of this process, check out my post{" "}
+        <a href="https://overreacted.io/react-as-a-ui-runtime/">
+          React as a UI Runtime.
+        </a>
+        )
+      </Paragraph>
+      <Header>Each Render Has Its Own Event Handlers</Header>
+      <Paragraph>So far so good. What about event handlers?</Paragraph>
+      <Paragraph>
+        Look at this example. It shows an alert with the count after three
+        seconds:
+      </Paragraph>
+      <Editor
+        value={renderCountAlertCode}
+        onValueChange={handleRenderCountAlertCode}
+        highlight={handleHighlight}
+        padding={globals.PADDING}
+        style={editorStyles}
+      />
+      <Paragraph>Let’s say I do this sequence of steps:</Paragraph>
+      <List>
+        <li>
+          <strong>Increment</strong> the counter to 3
+        </li>
+        <li>
+          <strong>Press</strong> "Show alert"
+        </li>
+        <li>
+          <strong>Increment</strong> it to 5 before timeout fires
+        </li>
+      </List>
+      <Image src={CounterGif} className="counterGif" />
     </section>
   );
 };
