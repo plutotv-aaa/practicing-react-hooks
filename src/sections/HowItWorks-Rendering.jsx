@@ -258,6 +258,7 @@ export const HowItWorksRendering = props => {
         setSomething(newObj) with a newly created object instead of mutating it
         is fine because state belonging to previous renders is intact. Each
       </Paragraph>
+      <Header>Each Render Has Its Own Effects</Header>
     </section>
   );
 };
