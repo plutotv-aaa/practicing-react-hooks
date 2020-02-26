@@ -6,6 +6,7 @@ import {
   BugEmoji,
   FireEmoji,
   Header,
+  Image,
   List,
   Paragraph,
   QuestionEmoji,
@@ -17,6 +18,7 @@ import {
 import { editorStyles, globals, handleHighlight } from "../shared";
 
 import {
+  useRefCounterIncrementSnippet,
   useRefManageFocusSnippet,
   createRefManageFocusSnippet,
   useRefCustomComparisonBugSnippet,
@@ -24,13 +26,23 @@ import {
   useRefCustomComparisonFix2Snippet,
   useRefCustomComparisonFix3Snippet,
   useRefUsePreviousCustomHookSnippet,
-  useRefTestSnippet
+  useRefTestSnippet,
+  useRefKeepMutableSnippet
   // useRefExample,
   // useRefExample2,
   // useRefExample3
 } from "../snippets/HowToUseHook-useRef";
 
+import DifferencesGif from "../assets/differences.gif";
+
 export const HowToUseUseRef = props => {
+  // createRef to manage input focus
+  const [
+    useRefCounterIncrementCode,
+    updateUseRefCounterIncrementCode
+  ] = useState(useRefCounterIncrementSnippet);
+  const handleUseRefCounterIncrementCode = editor =>
+    updateUseRefCounterIncrementCode(editor);
   // createRef to manage input focus
   const [
     createRefManagingFocusCode,
@@ -80,6 +92,7 @@ export const HowToUseUseRef = props => {
   ] = useState(useRefUsePreviousCustomHookSnippet);
   const handleUsePreviousCustomHookCode = editor =>
     updateUsePreviousCustomHookCode(editor);
+
   // useRef usePrevious Custom Hook
   const [
     useRefCustomComparisonFix3Code,
@@ -87,6 +100,13 @@ export const HowToUseUseRef = props => {
   ] = useState(useRefCustomComparisonFix3Snippet);
   const handleUseRefCustomComparisonFix3Code = editor =>
     updateUseRefCustomComparisonFix3Code(editor);
+
+  // Keeping mutable variable
+  const [useRefKeepMutableCode, updateUseRefKeepMutableCode] = useState(
+    useRefKeepMutableSnippet
+  );
+  const handleUseRefKeepMutableCode = editor =>
+    updateUseRefKeepMutableCode(editor);
 
   // // useRef Example
   // const [useRefCode, updateHandleUseRefCode] = useState(useRefExample);
@@ -113,12 +133,61 @@ export const HowToUseUseRef = props => {
         </strong>
       </Blockquote>
       <Paragraph>
+        The useRef Hook lets us create mutable variables inside functional
+        components. There are three main key points that you should keep in mind
+        when using the useRef Hook:
+      </Paragraph>
+      <List>
+        <li>
+          A ref created with useRef will be created only when the component has
+          been mounted and preserved during the full lifecycle.
+        </li>
+        <li>
+          Refs can be used for accessing DOM nodes or React elements, and for
+          keeping mutable variables (like instance variables in class
+          components).
+        </li>
+        <li>Updating a ref value is a side effect.</li>
+        <li>
+          Updating a ref is a side effect so it should be done only inside an
+          useEffect (or useLayoutEffect) or inside an event handler.
+        </li>
+        <li>
+          If you create a ref using createRef in a functional component, React
+          will create a new instance of the ref on every re-render instead of
+          keeping it between renders.
+        </li>
+        <li>Mutating the .current property won’t cause a re-render.</li>
+        <li>
+          Unless you’re doing lazy initialization, avoid setting refs during
+          rendering — this can lead to surprising behavior. Instead, typically
+          you want to modify refs in event handlers and effects.
+        </li>
+      </List>
+
+      <Paragraph>
         There are two main uses of <code>useRef</code>:
       </Paragraph>
       <List>
         <li>Accessing DOM nodes or React Elements</li>
         <li>Keeping a mutable variable</li>
       </List>
+      <Paragraph>
+        In this example, every time the component has been re-rendered, the
+        counter is incremented.
+      </Paragraph>
+      <Editor
+        value={useRefCounterIncrementCode}
+        onValueChange={handleUseRefCounterIncrementCode}
+        highlight={handleHighlight}
+        padding={globals.PADDING}
+        style={editorStyles}
+      />
+      <Paragraph>
+        All side effects should be done in the “Layout phase” or in the “Commit
+        phase”. In terms of React Hooks, inside the useLayoutEffect or the
+        useEffect.
+      </Paragraph>
       <Paragraph>
         In this example, we are using the the <strong>createRef API</strong> to
         manage the focus of an input when the user clicks on the button.
@@ -144,6 +213,7 @@ export const HowToUseUseRef = props => {
         <QuestionEmoji />
         Wait! What's the difference?
       </QuestionHeader>
+      <Image src="https://i.imgur.com/yMlp70t.jpg" width="100%" />
       <Paragraph>
         Why do we need to use useRef hook when we can use createRef API to
         manage the focus of an input? Does the React team just want to make the
@@ -173,6 +243,7 @@ export const HowToUseUseRef = props => {
         padding={globals.PADDING}
         style={editorStyles}
       />
+      <Image src={DifferencesGif} className="counterGif" width="100%" />
       <Paragraph>
         <strong>useRef</strong> can hold a value in its <code>.current</code>{" "}
         property and it can persist after the component re-renders. Therefore,
@@ -197,9 +268,10 @@ export const HowToUseUseRef = props => {
         weight. However, if you test the code above, you can see that our effect
         run every time the user clicks on the button, even when the weight
         property stays the same. That is because useEffect Hook use shallow
-        comparison by default while our userState is an object. <BugEmoji/><BugEmoji/> <BugEmoji/><WrenchEmoji /> To fix
-        this bug, we need to write our own comparison instead of using the
-        default one.
+        comparison by default while our userState is an object. <BugEmoji />
+        <BugEmoji /> <BugEmoji />
+        <WrenchEmoji /> To fix this bug, we need to write our own comparison
+        instead of using the default one.
       </Paragraph>
       <Header>Steps for fixing comparison bugs</Header>
       <List>
@@ -224,7 +296,9 @@ export const HowToUseUseRef = props => {
         <code>ComponentDidUpdate</code> lifecycle, we can easily have the
         previous state value.
       </Paragraph>
-      <Blockquote><FireEmoji /> useRef comes to rescue</Blockquote>
+      <Blockquote>
+        <FireEmoji /> useRef comes to rescue
+      </Blockquote>
       <Editor
         value={useRefCustomComparisonFix2Code}
         onValueChange={handleUseRefCustomComparisonFix2Code}
@@ -271,6 +345,18 @@ export const HowToUseUseRef = props => {
         not rerender when the current value of useRef changes, if you want that
         effect, use useState hook instead 👏👏👏
       </Paragraph>
+      <Paragraph>
+        Below is an example of keeping a mutable variable in a ref. The Timer
+        component initializes a setInterval on every re-render and needs to
+        implement a callback to stop its interval imperatively:
+      </Paragraph>
+      <Editor
+        value={useRefKeepMutableCode}
+        onValueChange={handleUseRefKeepMutableCode}
+        highlight={handleHighlight}
+        padding={globals.PADDING}
+        style={editorStyles}
+      />
       <Header>Resources</Header>
       <List>
         <li>
@@ -286,6 +372,11 @@ export const HowToUseUseRef = props => {
         <li>
           <a href="https://egghead.io/lessons/react-handle-deep-object-comparison-in-react-s-useeffect-hook-with-the-useref-hook">
             Handle Deep Object Comparison in React's useEffect hook
+          </a>
+        </li>
+        <li>
+          <a href="https://medium.com/trabe/react-useref-hook-b6c9d39e2022">
+            React useRef Hook
           </a>
         </li>
       </List>

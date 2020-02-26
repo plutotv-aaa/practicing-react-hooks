@@ -1,3 +1,19 @@
+export const useRefCounterIncrementSnippet = `
+import React, { useRef } from "react";
+
+const RenderCounter = () => {
+  const counter = useRef(0);
+  
+  useEffect(() => {
+    // Every time the component has been re-rendered,
+    // the counter is incremented
+    counter.current = counter.current + 1;
+  }); 
+  
+  return (
+    <h1>{\`The component has been re-rendered \${counter} times\`}</h1>
+  );
+};`;
 export const createRefManageFocusSnippet = `
 import {createRef} from 'react' 
 
@@ -162,6 +178,33 @@ const Profile = () => {
 }
 
 export default Profile
+`;
+export const useRefKeepMutableSnippet = `
+const Timer = () => {
+   const intervalRef = useRef();
+ 
+   useEffect(() => {
+     const id = setInterval(() => {
+       console.log("A second has passed");
+     }, 1000);
+     
+     // We need the interval id to be accessible from the whole component.
+     // If we stored the id in a state variable, the component would be re-rendered
+     // after the state update so a new interval will be created (this effect is triggered
+     // after every re-render) leading us to the infinite loop hell.
+     intervalRef.current = id;
+     
+     return () => clearInterval(intervalRef.current);
+   });
+ 
+   const handleCancel = () => clearInterval(intervalRef.current);
+   
+   return (
+     <>
+       //...
+     </>
+   );
+ }
 `;
 
 export const useRefExample = `

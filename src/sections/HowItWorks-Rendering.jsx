@@ -13,6 +13,8 @@ import { Header, Image, List, Paragraph } from "../application/Application";
 import CounterGif from "../assets/counter.gif";
 import "./styles/Rendering.css";
 
+import ImgReactLifecycleHooks from "../assets/react-lifecycle-hooks.jpg";
+
 export const HowItWorksRendering = props => {
   // counter
   const [renderingCode, updateRenderingCode] = useState(RenderCodeSnippet);
@@ -43,6 +45,19 @@ export const HowItWorksRendering = props => {
 
   return (
     <section>
+      <Image src={ImgReactLifecycleHooks} width="100%" />
+      <Header>Knowledge</Header>
+      <List>
+        <li>
+          The “Render phase” may be restarted by React so it has to be pure, it
+          can’t have side effects.
+        </li>
+        <li>
+          All side effects should be done in the “Layout phase” or in the
+          “Commit phase”. In terms of React Hooks, inside the useLayoutEffect or
+          the useEffect.
+        </li>
+      </List>
       <Header>Each Render Has Its Own Props and State</Header>
       <Paragraph>
         Here’s a counter. Look at the highlighted line closely:
