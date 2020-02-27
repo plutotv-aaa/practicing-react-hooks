@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import withStyles from '../../core/jss/theme/withStyles';
 
@@ -23,29 +23,32 @@ const styles = theme => ({
         backgroundColor: '#ddd',
         color: 'black',
       },
-      '& .active': {
-        backgroundColor: '#4caf50',
-        color: 'white',
+      '&.active': {
+        backgroundColor: '#ddd',
+        color: 'black',
       },
     },
   },
 });
 
 const paths = [
-  { name: 'Render', to: '/' },
-  { name: 'UseEffect', to: '/use-effect' },
-  { name: 'UseRef', to: '/use-ref' },
-  { name: 'UseReducer', to: '/use-reducer' },
-  { name: 'useEventListener', to: '/use-event-listener' },
+  { key: 'render', className: 'Render', to: '/', exact: true },
+  { key: 'useseffect', className: 'UseEffect', to: '/use-effect', exact: false },
+  { key: 'useref', className: 'UseRef', to: '/use-ref', exact: false },
+  { key: 'usereducer', className: 'UseReducer', to: '/use-reducer', exact: false },
+  {
+    key: 'useeventlistener',
+    className: 'useEventListener',
+    to: '/use-event-listener',
+    exact: false,
+  },
 ];
 
 export const Nav = ({ classes }) => {
   return (
     <nav className={classes.nav}>
-      {paths.map(({ name, to }, i) => (
-        <Link key={name} to={to}>
-          {name}
-        </Link>
+      {paths.map(path => (
+        <NavLink {...path}>Render</NavLink>
       ))}
     </nav>
   );

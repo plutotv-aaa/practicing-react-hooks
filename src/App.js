@@ -16,6 +16,9 @@ export function App(props) {
       <Nav />
       <article>
         <Switch>
+          <Route exact path="/">
+            <Rendering />
+          </Route>
           <Route path="/use-effect">
             <UseEffectGuide />
           </Route>
@@ -27,9 +30,6 @@ export function App(props) {
           </Route>
           <Route path="/use-event-listener">
             <UseEventListenerGuide />
-          </Route>
-          <Route path="/">
-            <Rendering />
           </Route>
         </Switch>
       </article>
