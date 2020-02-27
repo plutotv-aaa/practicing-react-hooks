@@ -1,31 +1,3 @@
-nav {
-  display: flex;
-  background-color: rgb(53, 59, 69);
-  overflow: hidden;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-start;
-}
-
-nav a {
-  padding: 14px 16px;
-  list-style: none;
-  color: #f2f2f2;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  align-items: center;
-}
-
-nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-nav a.active {
-  background-color: #4caf50;
-  color: white;
-}
-
 /* Article sections */
 section {
   display: flex;

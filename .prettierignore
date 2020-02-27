@@ -1,0 +1,15 @@
+.git/
+.gitignore
+.prettierignore
+.eslintignore
+.editorconfig
+LICENSE
+
+build/
+coverage/
+*.png
+*.xml
+*.ico
+*.ejs
+
+*.min.js

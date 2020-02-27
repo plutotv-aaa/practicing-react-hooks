@@ -1,0 +1,40 @@
+export * from "../color/colorManipulator";
+export {
+  default as createSquiTheme,
+  ThemeOptions,
+  Theme,
+  Direction
+} from "../create/createSquiTheme";
+export {
+  default as createPalette,
+  PaletteColorOptions,
+  SimplePaletteColorOptions
+} from "../create/createPalette";
+export { default as createStyles } from "../create/createStyles";
+export {
+  TypographyStyle,
+  Variant as TypographyVariant
+} from "../create/createTypography";
+
+export { default as makeStyles } from "./makeStyles";
+export { default as responsiveFontSizes } from "./responsiveFontSizes";
+export { ComponentsPropsList } from "./props";
+export * from "./transitions";
+export { default as useTheme } from "./useTheme";
+
+export {
+  default as withStyles,
+  WithStyles,
+  StyleRules,
+  StyleRulesCallback,
+  StyledComponentProps
+} from "./withStyles";
+
+export { default as withTheme, WithTheme } from "./withTheme";
+export {
+  createGenerateClassName,
+  jssPreset,
+  StylesProvider,
+  ThemeProvider as SquiThemeProvider,
+  ThemeProvider
+} from "../";

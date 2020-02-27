@@ -15,7 +15,7 @@ import {
   WrenchEmoji
 } from "../application/Application";
 
-import { editorStyles, globals, handleHighlight } from "../shared";
+import { editorStyles, globals, handleHighlight } from "../core";
 
 import {
   useRefCounterIncrementSnippet,

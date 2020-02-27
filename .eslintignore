@@ -1,0 +1,6 @@
+/build/**
+/coverage/**
+/docs/**
+/node_modules/**
+/src/hlsjs/**
+.eslintrc.js

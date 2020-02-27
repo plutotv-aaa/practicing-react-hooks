@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Editor from "react-simple-code-editor";
-import { editorStyles, globals, handleHighlight } from "../shared";
+import { editorStyles, globals, handleHighlight } from "../core";
 
 import {
   useEffectExample,

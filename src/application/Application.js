@@ -1,7 +1,7 @@
 export { Blockquote } from "./elements/Blockquote";
 export { BugEmoji } from "./emojis/BugEmoji";
 export { FireEmoji } from "./emojis/FireEmoji";
-export { Nav } from "./components/Nav";
+export { StyledNav } from "./components/Nav";
 export { Header } from "./elements/Header";
 export { Image } from "./elements/Image";
 export { List } from "./components/List";
