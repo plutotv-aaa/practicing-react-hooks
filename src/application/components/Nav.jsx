@@ -48,7 +48,7 @@ export const Nav = ({ classes }) => {
   return (
     <nav className={classes.nav}>
       {paths.map(path => (
-        <NavLink {...path}>Render</NavLink>
+        <NavLink {...path}>{path.className}</NavLink>
       ))}
     </nav>
   );
