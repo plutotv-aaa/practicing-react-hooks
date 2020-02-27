@@ -1,9 +1,5 @@
 import { Omit } from '../types';
-import {
-  CreateCSSProperties,
-  StyledComponentProps,
-  WithStylesOptions,
-} from '..//withStyles';
+import { CreateCSSProperties, StyledComponentProps, WithStylesOptions } from '..//withStyles';
 import { Theme as DefaultTheme } from '../create/createPlutoTVTheme';
 import * as React from 'react';
 

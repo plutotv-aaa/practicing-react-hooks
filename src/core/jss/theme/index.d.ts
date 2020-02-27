@@ -17,7 +17,6 @@ export {
 } from "../create/createTypography";
 
 export { default as makeStyles } from "./makeStyles";
-export { default as responsiveFontSizes } from "./responsiveFontSizes";
 export { ComponentsPropsList } from "./props";
 export * from "./transitions";
 export { default as useTheme } from "./useTheme";

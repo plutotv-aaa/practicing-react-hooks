@@ -1,203 +1,44 @@
-import { StyleRules } from "./withStyles";
+import { StyleRules } from './withStyles';
 
-import { AppBarClassKey } from "../AppBar";
-import { AvatarClassKey } from "../Avatar";
-import { BackdropClassKey } from "../Backdrop";
-import { BadgeClassKey } from "../Badge";
-import { BottomNavigationActionClassKey } from "../BottomNavigationAction";
-import { BottomNavigationClassKey } from "../BottomNavigation";
-import { BreadcrumbsClassKey } from "../Breadcrumbs";
-import { ButtonBaseClassKey } from "../ButtonBase";
-import { ButtonClassKey } from "../Button";
-import { ButtonGroupClassKey } from "../ButtonGroup";
-import { CardActionAreaClassKey } from "../CardActionArea";
-import { CardActionsClassKey } from "../CardActions";
-import { CardClassKey } from "../Card";
-import { CardContentClassKey } from "../CardContent";
-import { CardHeaderClassKey } from "../CardHeader";
-import { CardMediaClassKey } from "../CardMedia";
-import { CheckboxClassKey } from "../Checkbox";
-import { ChipClassKey } from "../Chip";
-import { CircularProgressClassKey } from "../CircularProgress";
-import { CollapseClassKey } from "../Collapse";
-import { ContainerClassKey } from "../Container";
-import { CssBaselineClassKey } from "../CssBaseline";
-import { DialogActionsClassKey } from "../DialogActions";
-import { DialogClassKey } from "../Dialog";
-import { DialogContentClassKey } from "../DialogContent";
-import { DialogContentTextClassKey } from "../DialogContentText";
-import { DialogTitleClassKey } from "../DialogTitle";
-import { DividerClassKey } from "../Divider";
-import { DrawerClassKey } from "../Drawer";
-import { ExpansionPanelActionsClassKey } from "../ExpansionPanelActions";
-import { ExpansionPanelClassKey } from "../ExpansionPanel";
-import { ExpansionPanelDetailsClassKey } from "../ExpansionPanelDetails";
-import { ExpansionPanelSummaryClassKey } from "../ExpansionPanelSummary";
-import { FabClassKey } from "../Fab";
-import { FilledInputClassKey } from "../FilledInput";
-import { FormControlClassKey } from "../FormControl";
-import { FormControlLabelClassKey } from "../FormControlLabel";
-import { FormGroupClassKey } from "../FormGroup";
-import { FormHelperTextClassKey } from "../FormHelperText";
-import { FormLabelClassKey } from "../FormLabel";
-import { GridClassKey } from "../Grid";
-import { GridListClassKey } from "../GridList";
-import { GridListTileBarClassKey } from "../GridListTileBar";
-import { GridListTileClassKey } from "../GridListTile";
-import { IconButtonClassKey } from "../IconButton";
-import { IconClassKey } from "../Icon";
-import { InputAdornmentClassKey } from "../InputAdornment";
-import { InputBaseClassKey } from "../InputBase";
-import { InputClassKey } from "../Input";
-import { InputLabelClassKey } from "../InputLabel";
-import { LinearProgressClassKey } from "../LinearProgress";
-import { LinkClassKey } from "../Link";
-import { ListClassKey } from "../List";
-import { ListItemAvatarClassKey } from "../ListItemAvatar";
-import { ListItemClassKey } from "../ListItem";
-import { ListItemIconClassKey } from "../ListItemIcon";
-import { ListItemSecondaryActionClassKey } from "../ListItemSecondaryAction";
-import { ListItemTextClassKey } from "../ListItemText";
-import { ListSubheaderClassKey } from "../ListSubheader";
-import { MenuClassKey } from "../Menu";
-import { MenuItemClassKey } from "../MenuItem";
-import { MobileStepperClassKey } from "../MobileStepper";
-import { NativeSelectClassKey } from "../NativeSelect";
-import { OutlinedInputClassKey } from "../OutlinedInput";
-import { PaperClassKey } from "../Paper";
-import { PopoverClassKey } from "../Popover";
-import { RadioClassKey } from "../Radio";
-import { SelectClassKey } from "../Select";
-import { SliderClassKey } from "../Slider";
-import { SnackbarClassKey } from "../Snackbar";
-import { SnackbarContentClassKey } from "../SnackbarContent";
-import { StepButtonClasskey } from "../StepButton";
-import { StepClasskey } from "../Step";
-import { StepConnectorClasskey } from "../StepConnector";
-import { StepContentClasskey } from "../StepContent";
-import { StepIconClasskey } from "../StepIcon";
-import { StepLabelClasskey } from "../StepLabel";
-import { StepperClasskey } from "../Stepper";
-import { SvgIconClassKey } from "../SvgIcon";
-import { SwitchClassKey } from "../Switch";
-import { TabClassKey } from "../Tab";
-import { TableBodyClassKey } from "../TableBody";
-import { TableCellClassKey } from "../TableCell";
-import { TableContainerClassKey } from "../TableContainer";
-import { TableClassKey } from "../Table";
-import { TableFooterClassKey } from "../TableFooter";
-import { TableHeadClassKey } from "../TableHead";
-import { TablePaginationClassKey } from "../TablePagination";
-import { TableRowClassKey } from "../TableRow";
-import { TableSortLabelClassKey } from "../TableSortLabel";
-import { TabsClassKey } from "../Tabs";
-import { TextFieldClassKey } from "../TextField";
-import { ToolbarClassKey } from "../Toolbar";
-import { TooltipClassKey } from "../Tooltip";
-import { TouchRippleClassKey } from "../ButtonBase/TouchRipple";
-import { TypographyClassKey } from "../Typography";
+//List PlutoTV UI Components here.
+// Example - import { ButtonClassKey } from "../Button";
+
+// In file '../Button' there should live a type, example below:
+// export type ButtonClassKey =
+//   | 'root'
+//   | 'label'
+//   | 'text'
+//   | 'textPrimary'
+//   | 'textSecondary'
+//   | 'outlined'
+//   | 'outlinedPrimary'
+//   | 'outlinedSecondary'
+//   | 'contained'
+//   | 'containedPrimary'
+//   | 'containedSecondary'
+//   | 'disableElevation'
+//   | 'focusVisible'
+//   | 'disabled'
+//   | 'colorInherit'
+//   | 'textSizeSmall'
+//   | 'textSizeLarge'
+//   | 'outlinedSizeSmall'
+//   | 'outlinedSizeLarge'
+//   | 'containedSizeSmall'
+//   | 'containedSizeLarge'
+//   | 'sizeSmall'
+//   | 'sizeLarge'
+//   | 'fullWidth'
+//   | 'startIcon'
+//   | 'endIcon'
+//   | 'iconSizeSmall'
+//   | 'iconSizeMedium'
+//   | 'iconSizeLarge';
 
 export type Overrides = {
-  [Name in keyof ComponentNameToClassKey]?: Partial<
-    StyleRules<ComponentNameToClassKey[Name]>
-  >;
+  [Name in keyof ComponentNameToClassKey]?: Partial<StyleRules<ComponentNameToClassKey[Name]>>;
 };
 
 export interface ComponentNameToClassKey {
-  PlutoTVAppBar: AppBarClassKey;
-  PlutoTVAvatar: AvatarClassKey;
-  PlutoTVBackdrop: BackdropClassKey;
-  PlutoTVBadge: BadgeClassKey;
-  PlutoTVBottomNavigation: BottomNavigationClassKey;
-  PlutoTVBottomNavigationAction: BottomNavigationActionClassKey;
-  PlutoTVBreadcrumbs: BreadcrumbsClassKey;
-  PlutoTVButton: ButtonClassKey;
-  PlutoTVButtonBase: ButtonBaseClassKey;
-  PlutoTVButtonGroup: ButtonGroupClassKey;
-  PlutoTVCard: CardClassKey;
-  PlutoTVCardActionArea: CardActionAreaClassKey;
-  PlutoTVCardActions: CardActionsClassKey;
-  PlutoTVCardContent: CardContentClassKey;
-  PlutoTVCardHeader: CardHeaderClassKey;
-  PlutoTVCardMedia: CardMediaClassKey;
-  PlutoTVCheckbox: CheckboxClassKey;
-  PlutoTVChip: ChipClassKey;
-  PlutoTVCircularProgress: CircularProgressClassKey;
-  PlutoTVCollapse: CollapseClassKey;
-  PlutoTVContainer: ContainerClassKey;
-  PlutoTVCssBaseline: CssBaselineClassKey;
-  PlutoTVDialog: DialogClassKey;
-  PlutoTVDialogActions: DialogActionsClassKey;
-  PlutoTVDialogContent: DialogContentClassKey;
-  PlutoTVDialogContentText: DialogContentTextClassKey;
-  PlutoTVDialogTitle: DialogTitleClassKey;
-  PlutoTVDivider: DividerClassKey;
-  PlutoTVDrawer: DrawerClassKey;
-  PlutoTVExpansionPanel: ExpansionPanelClassKey;
-  PlutoTVExpansionPanelActions: ExpansionPanelActionsClassKey;
-  PlutoTVExpansionPanelDetails: ExpansionPanelDetailsClassKey;
-  PlutoTVExpansionPanelSummary: ExpansionPanelSummaryClassKey;
-  PlutoTVFab: FabClassKey;
-  PlutoTVFilledInput: FilledInputClassKey;
-  PlutoTVFormControl: FormControlClassKey;
-  PlutoTVFormControlLabel: FormControlLabelClassKey;
-  PlutoTVFormGroup: FormGroupClassKey;
-  PlutoTVFormHelperText: FormHelperTextClassKey;
-  PlutoTVFormLabel: FormLabelClassKey;
-  PlutoTVGrid: GridClassKey;
-  PlutoTVGridList: GridListClassKey;
-  PlutoTVGridListTile: GridListTileClassKey;
-  PlutoTVGridListTileBar: GridListTileBarClassKey;
-  PlutoTVIcon: IconClassKey;
-  PlutoTVIconButton: IconButtonClassKey;
-  PlutoTVInput: InputClassKey;
-  PlutoTVInputAdornment: InputAdornmentClassKey;
-  PlutoTVInputBase: InputBaseClassKey;
-  PlutoTVInputLabel: InputLabelClassKey;
-  PlutoTVLinearProgress: LinearProgressClassKey;
-  PlutoTVLink: LinkClassKey;
-  PlutoTVList: ListClassKey;
-  PlutoTVListItem: ListItemClassKey;
-  PlutoTVListItemAvatar: ListItemAvatarClassKey;
-  PlutoTVListItemIcon: ListItemIconClassKey;
-  PlutoTVListItemSecondaryAction: ListItemSecondaryActionClassKey;
-  PlutoTVListItemText: ListItemTextClassKey;
-  PlutoTVListSubheader: ListSubheaderClassKey;
-  PlutoTVMenu: MenuClassKey;
-  PlutoTVMenuItem: MenuItemClassKey;
-  PlutoTVMobileStepper: MobileStepperClassKey;
-  PlutoTVNativeSelect: NativeSelectClassKey;
-  PlutoTVOutlinedInput: OutlinedInputClassKey;
-  PlutoTVPaper: PaperClassKey;
-  PlutoTVPopover: PopoverClassKey;
-  PlutoTVRadio: RadioClassKey;
-  PlutoTVSelect: SelectClassKey;
-  PlutoTVSlider: SliderClassKey;
-  PlutoTVSnackbar: SnackbarClassKey;
-  PlutoTVSnackbarContent: SnackbarContentClassKey;
-  PlutoTVStep: StepClasskey;
-  PlutoTVStepButton: StepButtonClasskey;
-  PlutoTVStepConnector: StepConnectorClasskey;
-  PlutoTVStepContent: StepContentClasskey;
-  PlutoTVStepIcon: StepIconClasskey;
-  PlutoTVStepLabel: StepLabelClasskey;
-  PlutoTVStepper: StepperClasskey;
-  PlutoTVSvgIcon: SvgIconClassKey;
-  PlutoTVSwitch: SwitchClassKey;
-  PlutoTVTab: TabClassKey;
-  PlutoTVTable: TableClassKey;
-  PlutoTVTableBody: TableBodyClassKey;
-  PlutoTVTableCell: TableCellClassKey;
-  PlutoTVTableContainer: TableContainerClassKey;
-  PlutoTVTableFooter: TableFooterClassKey;
-  PlutoTVTableHead: TableHeadClassKey;
-  PlutoTVTablePagination: TablePaginationClassKey;
-  PlutoTVTableRow: TableRowClassKey;
-  PlutoTVTableSortLabel: TableSortLabelClassKey;
-  PlutoTVTabs: TabsClassKey;
-  PlutoTVTextField: TextFieldClassKey;
-  PlutoTVToolbar: ToolbarClassKey;
-  PlutoTVTooltip: TooltipClassKey;
-  PlutoTVTouchRipple: TouchRippleClassKey;
-  PlutoTVTypography: TypographyClassKey;
+  // PlutoTVButton: ButtonClassKey;
 }

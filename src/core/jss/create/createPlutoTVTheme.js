@@ -3,7 +3,6 @@ import createBreakpoints from './createBreakpoints';
 import createMixins from './createMixins';
 import createPalette from './createPalette';
 import createTypography from './createTypography';
-import shadows from '../theme/shadows';
 import shape from '../theme/shape';
 import createSpacing from './createSpacing';
 import transitions from '../theme/transitions';
@@ -31,7 +30,6 @@ function createPlutoTVTheme(options = {}, ...args) {
       overrides: {}, // Inject custom style
       palette,
       props: {}, // Provide default props
-      shadows,
       typography: createTypography(palette, typographyInput),
       spacing,
       shape,
