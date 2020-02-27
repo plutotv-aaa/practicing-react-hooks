@@ -1,0 +1,4 @@
+{
+  "name": "get-styles-creator",
+  "main": "./getStylesCreator.js"
+}

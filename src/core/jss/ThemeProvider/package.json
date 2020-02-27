@@ -1,0 +1,4 @@
+{
+  "name": "theme-provider",
+  "main": "./ThemeProvider.js"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "get-theme-props",
+  "main": "./getThemeProps.js"
+}
