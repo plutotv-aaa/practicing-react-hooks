@@ -1,4 +1,4 @@
-import { Theme } from '../create/createSquiTheme';
+import { Theme } from '../create/createPlutoTVTheme';
 import { PropInjector } from '../types';
 
 export interface WithTheme {

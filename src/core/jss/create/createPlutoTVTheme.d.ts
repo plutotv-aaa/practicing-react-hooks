@@ -42,4 +42,4 @@ export interface Theme {
   zIndex: ZIndex;
 }
 
-export default function createSquiTheme(options?: ThemeOptions, ...args: object[]): Theme;
+export default function createPlutoTVTheme(options?: ThemeOptions, ...args: object[]): Theme;

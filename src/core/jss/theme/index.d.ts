@@ -1,10 +1,10 @@
 export * from "../color/colorManipulator";
 export {
-  default as createSquiTheme,
+  default as createPlutoTVTheme,
   ThemeOptions,
   Theme,
   Direction
-} from "../create/createSquiTheme";
+} from "../create/createPlutoTVTheme";
 export {
   default as createPalette,
   PaletteColorOptions,
@@ -35,6 +35,6 @@ export {
   createGenerateClassName,
   jssPreset,
   StylesProvider,
-  ThemeProvider as SquiThemeProvider,
+  ThemeProvider as PlutoTVThemeProvider,
   ThemeProvider
 } from "../";

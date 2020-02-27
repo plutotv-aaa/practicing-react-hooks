@@ -4,7 +4,7 @@ import {
   StyledComponentProps,
   WithStylesOptions,
 } from '..//withStyles';
-import { Theme as DefaultTheme } from '../create/createSquiTheme';
+import { Theme as DefaultTheme } from '../create/createPlutoTVTheme';
 import * as React from 'react';
 
 // These definitions are almost identical to the ones in ../styled

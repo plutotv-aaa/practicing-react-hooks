@@ -47,10 +47,10 @@ export default function createGenerateClassName(options = {}) {
     const name = styleSheet.options.name;
 
     // Is a global static MUI style?
-    if (name && name.indexOf('Squi') === 0 && !styleSheet.options.link && !disableGlobal) {
+    if (name && name.indexOf('PlutoTV') === 0 && !styleSheet.options.link && !disableGlobal) {
       // We can use a shorthand class name, we never use the keys to style the components.
       if (pseudoClasses.indexOf(rule.key) !== -1) {
-        return `Squi-${rule.key}`;
+        return `PlutoTV-${rule.key}`;
       }
 
       const prefix = `${seedPrefix}${name}-${rule.key}`;

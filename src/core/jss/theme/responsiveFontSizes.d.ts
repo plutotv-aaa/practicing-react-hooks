@@ -1,4 +1,4 @@
-import { Theme } from '../create/createSquiTheme';
+import { Theme } from '../create/createPlutoTVTheme';
 import { Breakpoint } from '../create/createBreakpoints';
 import { Variant } from '../create/createTypography';
 

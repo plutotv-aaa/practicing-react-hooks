@@ -1,5 +1,5 @@
 export * from "../colors/colorManipulator";
-export { default as createSquiTheme } from "./createSquiTheme";
+export { default as createPlutoTVTheme } from "./createPlutoTVTheme";
 export { default as createStyles } from "./createStyles";
 export { default as makeStyles } from "./makeStyles";
 export { default as responsiveFontSizes } from "./responsiveFontSizes";
@@ -11,6 +11,6 @@ export {
   createGenerateClassName,
   jssPreset,
   StylesProvider,
-  ThemeProvider as SquiThemeProvider,
+  ThemeProvider as PlutoTVThemeProvider,
   ThemeProvider
 } from "../";

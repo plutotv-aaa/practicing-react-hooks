@@ -1,5 +1,5 @@
 import { PropInjector } from '../types';
-import { Theme } from '../create/createSquiTheme';
+import { Theme } from '../create/createPlutoTVTheme';
 import {
   CreateCSSProperties,
   CSSProperties,

@@ -1,4 +1,4 @@
-import { Theme as DefaultTheme } from '../create/createSquiTheme';
+import { Theme as DefaultTheme } from '../create/createPlutoTVTheme';
 import { ClassNameMap, Styles, WithStylesOptions } from '../withStyles';
 
 import { Omit } from '../types';

@@ -1,5 +1,5 @@
-import createSquiTheme from '../create/createSquiTheme';
+import createPlutoTVTheme from '../create/createPlutoTVTheme';
 
-const defaultTheme = createSquiTheme();
+const defaultTheme = createPlutoTVTheme();
 
 export default defaultTheme;

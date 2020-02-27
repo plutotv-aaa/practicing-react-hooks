@@ -1,9 +1,4 @@
-import {
-  ClassNameMap,
-  PropsOfStyles,
-  Styles,
-  WithStylesOptions,
-} from '../theme/withStyles';
+import { ClassNameMap, PropsOfStyles, Styles, WithStylesOptions } from '../withStyles';
 import { Omit } from '../types';
 import { DefaultTheme } from '../theme/defaultTheme';
 

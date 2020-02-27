@@ -2,7 +2,7 @@ let warnOnce;
 
 export default function createSpacing(spacingInput = 8) {
   // Already transformed.
-  if (spacingInput.squi) {
+  if (spacingInput.plutoTV) {
     return spacingInput;
   }
 
@@ -68,8 +68,6 @@ export default function createSpacing(spacingInput = 8) {
               'UI: theme.spacing.unit usage has been deprecated.',
               'It will be removed in v5.',
               'You can replace `theme.spacing.unit * y` with `theme.spacing(y)`.',
-              '',
-              'You can use the `https://github.com/squi-org/UI/tree/master/packages/UI-codemod/README.md#theme-spacing-api` migration helper to make the process smoother.',
             ].join('\n'),
           );
         }
@@ -79,7 +77,7 @@ export default function createSpacing(spacingInput = 8) {
       return spacingInput;
     },
   });
-  spacing.squi = true;
+  spacing.plutoTV = true;
 
   return spacing;
 }

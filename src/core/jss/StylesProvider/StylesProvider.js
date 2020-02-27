@@ -76,7 +76,7 @@ export default function StylesProvider(props) {
   ) {
     if (!injectFirstNode) {
       const head = document.head;
-      injectFirstNode = document.createComment("squi-inject-first");
+      injectFirstNode = document.createComment("plutoTV-inject-first");
       head.insertBefore(injectFirstNode, head.firstChild);
     }
 

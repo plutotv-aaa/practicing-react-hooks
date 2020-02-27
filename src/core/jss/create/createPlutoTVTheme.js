@@ -9,7 +9,7 @@ import createSpacing from './createSpacing';
 import transitions from '../theme/transitions';
 import zIndex from '../theme/zIndex';
 
-function createSquiTheme(options = {}, ...args) {
+function createPlutoTVTheme(options = {}, ...args) {
   const {
     breakpoints: breakpointsInput = {},
     mixins: mixinsInput = {},
@@ -23,7 +23,7 @@ function createSquiTheme(options = {}, ...args) {
   const breakpoints = createBreakpoints(breakpointsInput);
   const spacing = createSpacing(spacingInput);
 
-  let squiTheme = deepmerge(
+  let plutoTVTheme = deepmerge(
     {
       breakpoints,
       direction: 'ltr',
@@ -41,7 +41,7 @@ function createSquiTheme(options = {}, ...args) {
     other,
   );
 
-  squiTheme = args.reduce((acc, argument) => deepmerge(acc, argument), squiTheme);
+  plutoTVTheme = args.reduce((acc, argument) => deepmerge(acc, argument), plutoTVTheme);
 
   if (process.env.NODE_ENV !== 'production') {
     const pseudoClasses = [
@@ -61,7 +61,7 @@ function createSquiTheme(options = {}, ...args) {
       for (key in node) {
         const child = node[key];
         if (depth === 1) {
-          if (key.indexOf('Squi') === 0 && child) {
+          if (key.indexOf('PlutoTV') === 0 && child) {
             traverse(child, key, depth + 1);
           }
         } else if (pseudoClasses.indexOf(key) !== -1 && Object.keys(child).length > 0) {
@@ -94,10 +94,10 @@ function createSquiTheme(options = {}, ...args) {
       }
     };
 
-    traverse(squiTheme.overrides);
+    traverse(plutoTVTheme.overrides);
   }
 
-  return squiTheme;
+  return plutoTVTheme;
 }
 
-export default createSquiTheme;
+export default createPlutoTVTheme;
