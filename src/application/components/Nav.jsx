@@ -42,6 +42,12 @@ const paths = [
     to: '/use-event-listener',
     exact: false,
   },
+  {
+    key: 'reacthree',
+    className: 'reactThree',
+    to: '/react-three',
+    exact: false,
+  },
 ];
 
 export const Nav = ({ classes }) => {

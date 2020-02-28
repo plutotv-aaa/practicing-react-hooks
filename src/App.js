@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { UseEffectGuide } from "./pages/UseEffectGuide";
-import { UseReducerGuide } from "./pages/UseReducerGuide";
-import { StyledNav as Nav } from "./application";
-import { UseEventListenerGuide } from "./pages/UseEventListenerGuide";
-import { UseRefGuide } from "./pages/UseRefGuide";
-import { Rendering } from "./pages/Rendering";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { UseEffectGuide } from './pages/UseEffectGuide';
+import { UseReducerGuide } from './pages/UseReducerGuide';
+import { StyledNav as Nav } from './application';
+import { UseEventListenerGuide } from './pages/UseEventListenerGuide';
+import { UseRefGuide } from './pages/UseRefGuide';
+import { Rendering } from './pages/Rendering';
+import { ReactThree } from './pages/ReactThree';
 
-import "./App.css";
+import './App.css';
 
 export function App(props) {
   return (
@@ -30,6 +31,9 @@ export function App(props) {
           </Route>
           <Route path="/use-event-listener">
             <UseEventListenerGuide />
+          </Route>
+          <Route path="/react-three">
+            <ReactThree />
           </Route>
         </Switch>
       </article>
