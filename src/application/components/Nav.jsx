@@ -2,34 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import withStyles from '../../core/jss/theme/withStyles';
-
-const styles = theme => ({
-  nav: {
-    display: 'flex',
-    backgroundColor: 'rgb(53, 59, 69)',
-    overflow: 'hidden',
-    flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'flex-start',
-    '& a': {
-      padding: '14px 16px',
-      listStyle: 'none',
-      color: '#f2f2f2',
-      textAlign: 'center',
-      textDecoration: 'none',
-      fontSize: '17px',
-      alignItems: 'center',
-      '&:hover': {
-        backgroundColor: '#ddd',
-        color: 'black',
-      },
-      '&.active': {
-        backgroundColor: '#ddd',
-        color: 'black',
-      },
-    },
-  },
-});
+import { styles } from './NavStyles';
 
 const paths = [
   { key: 'render', className: 'Render', to: '/', exact: true },
@@ -46,6 +19,12 @@ const paths = [
     key: 'reacthree',
     className: 'reactThree',
     to: '/react-three',
+    exact: false,
+  },
+  {
+    key: 'cssgrid',
+    className: 'CSSGrid',
+    to: '/css-grid',
     exact: false,
   },
 ];

@@ -8,6 +8,7 @@ import { UseEventListenerGuide } from './pages/UseEventListenerGuide';
 import { UseRefGuide } from './pages/UseRefGuide';
 import { Rendering } from './pages/Rendering';
 import { ReactThree } from './pages/ReactThree';
+import { CSSGrid } from './pages/CSSGrid';
 
 import './App.css';
 
@@ -17,24 +18,13 @@ export function App(props) {
       <Nav />
       <article>
         <Switch>
-          <Route exact path="/">
-            <Rendering />
-          </Route>
-          <Route path="/use-effect">
-            <UseEffectGuide />
-          </Route>
-          <Route path="/use-reducer">
-            <UseReducerGuide />
-          </Route>
-          <Route path="/use-ref">
-            <UseRefGuide />
-          </Route>
-          <Route path="/use-event-listener">
-            <UseEventListenerGuide />
-          </Route>
-          <Route path="/react-three">
-            <ReactThree />
-          </Route>
+          <Route exact path="/" component={Rendering} />
+          <Route path="/use-effect" component={UseEffectGuide} />
+          <Route path="/use-reducer" component={UseReducerGuide} />
+          <Route path="/use-ref" component={UseRefGuide} />
+          <Route path="/use-event-listener" component={UseEventListenerGuide} />
+          <Route path="/react-three" component={ReactThree} />
+          <Route path="/css-grid" component={CSSGrid} />
         </Switch>
       </article>
     </Router>
