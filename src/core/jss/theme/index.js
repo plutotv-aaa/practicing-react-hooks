@@ -1,6 +1,5 @@
 export * from "../colors/colorManipulator";
 export { default as createPlutoTVTheme } from "./createPlutoTVTheme";
-export { default as createStyles } from "./createStyles";
 export { default as makeStyles } from "./makeStyles";
 export * from "./transitions";
 export { default as useTheme } from "./useTheme";

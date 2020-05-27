@@ -10,7 +10,6 @@ export {
   PaletteColorOptions,
   SimplePaletteColorOptions
 } from "../create/createPalette";
-export { default as createStyles } from "../create/createStyles";
 export {
   TypographyStyle,
   Variant as TypographyVariant

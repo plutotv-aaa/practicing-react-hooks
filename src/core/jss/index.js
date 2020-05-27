@@ -1,9 +1,6 @@
 export { default as createGenerateClassName } from './create/createGenerateClassName';
 export * from './create/createGenerateClassName';
 
-export { default as createStyles } from './create/createStyles';
-export * from './create/createStyles';
-
 export { default as getThemeProps } from './getThemeProps';
 export * from './getThemeProps';
 

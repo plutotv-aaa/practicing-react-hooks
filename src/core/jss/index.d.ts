@@ -2,13 +2,6 @@ import * as React from 'react';
 import { Omit } from './types';
 import { StyledComponentProps } from './theme';
 export { StyledComponentProps };
-
-/**
- * @deprecated
- * Import from `@material-ui/types` instead
- *
- * TODO: to remove in v5
- */
 export { Omit };
 
 /**
@@ -52,9 +45,6 @@ export namespace PropTypes {
 
 export { default as createGenerateClassName } from './create/createGenerateClassName';
 export * from './create/createGenerateClassName';
-
-export { default as createStyles } from './create/createStyles';
-export * from './create/createStyles';
 
 export { default as getThemeProps } from './getThemeProps';
 export * from './getThemeProps';
