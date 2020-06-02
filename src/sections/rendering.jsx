@@ -16,7 +16,7 @@ import {
 
 import { Header, Image, List, Paragraph } from '../application/Application';
 import CounterGif from '../assets/counter.gif';
-import { styles } from './RenderingStyles';
+import { styles } from './rendering-styles';
 
 import ImgReactLifecycleHooks from '../assets/react-lifecycle-hooks.jpg';
 
