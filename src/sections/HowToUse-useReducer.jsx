@@ -5,7 +5,7 @@ import {
   useReducerEX1Snippet,
   useReducerDispatchSnippet,
   useReducerContactsReducerSnippet
-} from "../snippets/HowToUseHook-useReducer";
+} from "../snippets/use-reducer";
 // TODO: import * as UseReducerSnippet
 
 import { Header, Paragraph } from "../application/Application";

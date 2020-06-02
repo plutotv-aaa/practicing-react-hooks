@@ -31,7 +31,7 @@ import {
   // useRefExample,
   // useRefExample2,
   // useRefExample3
-} from "../snippets/HowToUseHook-useRef";
+} from "../snippets/use-ref";
 
 import DifferencesGif from "../assets/differences.gif";
 

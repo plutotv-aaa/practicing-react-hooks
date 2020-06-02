@@ -12,7 +12,7 @@ import {
   RegularFunctionSnippet,
   SubstitutionPrincipleSnippet,
   SubstitutionPrincipleSnippet2,
-} from '../snippets/HowItWorks-Render';
+} from '../snippets/render';
 
 import { Header, Image, List, Paragraph } from '../application/Application';
 import CounterGif from '../assets/counter.gif';

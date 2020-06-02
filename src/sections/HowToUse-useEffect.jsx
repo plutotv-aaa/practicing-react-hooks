@@ -5,8 +5,8 @@ import { editorStyles, globals, handleHighlight } from "../core";
 import {
   useEffectExample,
   useEffectFnDeps
-} from "../snippets/HowToUseHook-useEffect";
-import { renderScopeCode } from "../snippets/renderScope";
+} from "../snippets/use-effect";
+import { renderScopeCode } from "../snippets/render-scope";
 
 import {
   Header,

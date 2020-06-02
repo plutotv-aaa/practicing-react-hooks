@@ -7,7 +7,7 @@ import {
   BasicConceptCSSSnippet,
   CssGrid3By3CSSSnippet,
   CssGrid3By3HTMLSnippet,
-} from '../snippets/HowToUse-CSSGrid';
+} from '../snippets/css-grid';
 
 import {
   GridContainer,
